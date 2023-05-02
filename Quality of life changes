@@ -7,8 +7,8 @@
 // @match        https://www.hentaiheroes.com/*
 // @match        https://www.hentaiheroes.com/home.html*
 // @icon         https://www.google.com/s2/favicons?sz=64&domain=hentaiheroes.com
-// @updateURL
-// @downloadURL
+// @updateURL    https://raw.githubusercontent.com/Kagetora120903/HH-script/main/Quality%20of%20life%20changes
+// @downloadURL  https://raw.githubusercontent.com/Kagetora120903/HH-script/main/Quality%20of%20life%20changes
 // @grant        none
 // ==/UserScript==
 
