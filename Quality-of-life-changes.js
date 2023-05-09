@@ -19,6 +19,9 @@ document.head.appendChild(css);
 //remove the ! on my profile
 css.sheet.insertRule('div.square-avatar-wrapper img.new_notif {display:none}');
 
+//move story path
+css.sheet.insertRule('div#breadcrumbs {top: 55px;}');
+
 //tweak team filter box
 css.sheet.insertRule('#arena_filter_box.form-wrapper {margin-right: 3px;margin-top: -7.75px;}');
 
@@ -37,6 +40,7 @@ css.sheet.insertRule('body>div>header .script-pop-timer .text {margin-left: 19.5
 //tweak battle button x1 and x10
 css.sheet.insertRule('#pre-battle .battle-buttons .battle-buttons-row {justify-content: space-evenly;}');
 
+//girl stat tooltip
 css.sheet.insertRule('.new_girl_tooltip {background-color: #111111;text-shadow: 2px -2px 10px #000, 2px 2px 10px #000, -2px 2px 10px #000, -2px -2px 10px #000 !important;box-shadow: 0 0 10px 5px #00000080;pointer-events: none;}');
 css.sheet.insertRule('.new_girl_tooltip .girl_tooltip_grade {filter: drop-shadow(0 0 1px #000) drop-shadow(0 0 5px #0fe) drop-shadow(0 0 10px #000);}');
 css.sheet.insertRule('.new_girl_tooltip .girl_tooltip_positions {background-color: unset;}');
@@ -48,12 +52,23 @@ css.sheet.insertRule('.new_girl_tooltip .caracs span {margin: 0px 5px !important
 //css.sheet.insertRule('.champions-bottom__amount-slider i.decrease {height: 50px;}');
 //css.sheet.insertRule('.champions-bottom__footer {margin-top: -7.5px;}');
 
+//tweaks for SM
+if(window.location.href.startsWith('https://www.hentaiheroes.com/event.html'))
+{
+    css.sheet.insertRule('.sultry-mysteries-container .sm-main #shop_tab_container .shop-section .restock-shop {margin-top: -7rem;margin-bottom: 3.5px;margin-left: 22.5rem;}');
+    css.sheet.insertRule('div.shop-timer.timer {margin-left: 38.5rem; width: 30rem;scale:0.9;}');
+    css.sheet.insertRule('.sultry-mysteries-container .sm-main #shop_tab_container .shop-section .shop-items-list {margin-top: 40px;margin-left: 50px;}');
+}
+
 //season scripts
 if(window.location.href.startsWith('https://www.hentaiheroes.com/season.html'))
 {
     //fix font size + img position
     css.sheet.insertRule('.rewards_pair .slot-item img {margin-top: -3.05rem !important;}');
     css.sheet.insertRule('.rewards_pair .slot-item .stack_num span {font-size: 15px !important;}');
+
+    //fix text font
+    css.sheet.insertRule('.white_text #mojo_data {font-size: .83rem;}');
 
     //move "find opponents" button
     css.sheet.insertRule('.blue_button_L {margin-left: 2.6rem !important;}');
@@ -66,15 +81,25 @@ if(window.location.href.startsWith('https://www.hentaiheroes.com/season-arena.ht
 {
     //fix season-arena style
     css.sheet.insertRule('#season-arena .player_team_block.battle_hero {margin-top: 3px;}');
-    css.sheet.insertRule('div#season-arena .energy_counter {margin-block: .6rem !important;}');
+    css.sheet.insertRule('div#season-arena .energy_counter {margin-bottom:4.5px;}');
     css.sheet.insertRule('div#season_battle_user_block_kiss_energy .energy_counter span[rel=count_txt] {position: absolute;left: 5.8rem;margin-top: -17.25px;}');
     css.sheet.insertRule('.change_team_container {margin-top: -7.5px;}');
+    css.sheet.insertRule('#season-arena .matchRating {margin-top: -3px;}');
+
+    //fix mojo bar + font
+    css.sheet.insertRule('.tier_bar_container .tier_bar {position: absolute;height: 107%;margin-top: -1.6px;margin-left: -1.7px;}');
+    css.sheet.insertRule('.player_team_block .seasons_tab_mojo #bar_mojo_container .tier_bar_container .white_text.centered_s #mojo_data {font-size: .8rem !important;margin-left: 15px;}');
 
     //tweak to hover stat
     css.sheet.insertRule('.new_girl_tooltip {scale:65%;margin-top: 120px !important;margin-left:58px !important;}');
 } else if(window.location.href.startsWith('https://www.hentaiheroes.com/tower-of-fame.html'))
 {
     css.sheet.insertRule('.new_girl_tooltip {scale:70%;margin-top: 75px !important;margin-left:50px !important}');
+    css.sheet.insertRule('#leagues_right .average-lvl {width: 130px;margin-left: -63px;margin-top: 45px;height: 1px;position: absolute;}');
+    css.sheet.insertRule('#leagues .matchRating {margin-top: -11.5px;position: absolute;scale: 80%;margin-left: 1.5rem !important;}');
+    css.sheet.insertRule('.leagues_team_block .challenge {margin-top: 90px;}');
+    css.sheet.insertRule('#leagues .gridWrapper {margin-left: 25px;}');
+    css.sheet.insertRule('#leagues_left .multiple-battles {margin-top: 6.75px;scale: 90%;margin-bottom: -3px;}');
 } else
 {
     css.sheet.insertRule('.new_girl_tooltip {opacity :81%;scale: 80%;top:auto !important;bottom:30% !important;margin-left: 35px !important)');
@@ -96,6 +121,7 @@ if(window.location.href.startsWith('https://www.hentaiheroes.com/home.html'))
     css.sheet.insertRule('#homepage .main-container .middle-container .bottom-container .box-container .info-container #news_button {margin-top: 7px;}');
     css.sheet.insertRule('#homepage .main-container .middle-container .bottom-container .box-container .info-container .monthly_card {margin-top: 18px;}');
     css.sheet.insertRule('#homepage .main-container .middle-container .bottom-container .box-container .info-container .monthly_card>span {margin-top: -5px}');
+    css.sheet.insertRule('#homepage .main-container .middle-container .waifu-and-right-side-container .right-side-container .event-container .event-widget-container .bundles .chest-container {text-shadow: 1px 1px 0 #369400, -1px 1px 0 #369400, -1px -1px 0 #369400, 1px -1px 0 #369400;}');
 
     //remove background blur effect
     css.sheet.insertRule('#bg_all {filter: none !important;}');
